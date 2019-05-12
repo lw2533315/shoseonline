@@ -1,0 +1,140 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    height: 92%;
+    font-family:Arial;
+    color:#fff;
+    
+}
+body{
+    /* background-image: url("./img/register1.jpg"); */
+    background-image: url("../img/register1.jpg");
+    background-size: cover;
+    background-size: no-repeat;
+}
+
+
+
+.login{
+    padding-left: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 700px;
+    height: 600px;
+    margin: auto;
+    position: absolute;
+   
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color : rgba(88, 109, 108, 0.514);
+  
+    box-shadow: 5px 8px 16px 0px rgba(0,0,0,0.9);
+}
+.innerlogin{
+    width:50%;
+    margin-left: 50px;
+    margin-top: 10px;
+  	padding-top: 20px;
+  	
+    background-color : transparent;
+
+}
+
+.error{
+	color: red;
+}
+
+
+::placeholder{
+    color:  rgba(182, 179, 196, 0.767);
+    text-align:center;
+
+}
+
+
+
+.red-star{
+    color :red;
+}
+
+
+.bigdiv{
+	padding-left : 5px;
+    width:50%;
+    margin-bottom:20px;
+    
+    box-sizing: border-box;
+}
+
+input[type=submit]:hover{
+    background: #efed40;
+    color:#262626;
+}
+
+input{
+	 color: rgba(78, 240, 218, 0.815);
+    border:none;
+    outline:none;
+    border:2px #fff dotted;
+    background:  transparent;
+    border-radius:20px;
+    box-sizing:border-box;
+    /* color:rgba(25, 10, 82, 0.582); */
+    padding:10px;
+    text-align:center;
+    font-size : 16px
+}
+input:focus{
+    border-style:solid;
+    border-color: #cf2332;
+	box-shadow: 0 0 15px #cf2332;
+}
+
+input[type = submit]{
+    border:none;
+    outline:none;
+    padding:10px;
+    color: #fff;
+    font-size: 16px;
+    font-family: Arial;
+    background: #ff267e;
+    cursor:pointer;
+    border-radius:20px;
+    border-radius: 20px;
+    margin-bottom:20px;
+}
+
+.smalldiv{
+    width: 47%;
+    margin-bottom:20px;
+}
+
+#talabel, #short{
+    margin-left:50px;
+}
+
+#short{
+    width:80%;
+    height:100px;
+
+}
+
+
+
+a{
+    color:#fff;
+    font-size:14px;
+    font-weight:hold;
+    text-decoration:none;
+    float:right;
+    padding-right:10px;
+    padding-top:10px;
+}
+a:hover{
+    text-decoration: underline;
+    color: #efed40;
+    
+}

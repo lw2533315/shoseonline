@@ -216,11 +216,13 @@ public class DoDAO {
 		ResultSet rs = null;
 		
 		try {
-			pstmt = conn.prepareStatement("select * from cart where customer_id =? ");
+			pstmt = conn.prepareStatement("select * from cart where customer_id =?");
 			pstmt.setInt(1, customer_id);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
-				cart.add(new Product(customer_id, rs.getString("item_id"), rs.getInt("quantity")));
+				if(rs.getInt("quantity")!=0) {
+					cart.add(new Product(customer_id, rs.getString("item_id"), rs.getInt("quantity")));
+				}
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -278,12 +280,12 @@ public class DoDAO {
 		PreparedStatement pstmt = null;
 		try {
 			conn.setAutoCommit(false);
-			if(quantity == 0) {
-				pstmt= conn.prepareStatement("delete from cart where item_id = ? and customer_id=?");
-				pstmt.setString(1, item_id);
-				pstmt.setInt(2, customer_id);
-			
-			}else {
+//			if(quantity == 0) {
+//				pstmt= conn.prepareStatement("delete from cart where item_id = ? and customer_id=?");
+//				pstmt.setString(1, item_id);
+//				pstmt.setInt(2, customer_id);
+//			
+//			}else {
 			
 			
 				
@@ -292,7 +294,7 @@ public class DoDAO {
 				pstmt.setString(2, item_id);
 				pstmt.setInt(3, customer_id);
 				
-			}
+//			}
 			pstmt.executeUpdate();
 			conn.commit();
 			
